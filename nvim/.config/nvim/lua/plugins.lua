@@ -5,5 +5,8 @@ return require('packer').startup(function(use)
   use 'rebelot/kanagawa.nvim'
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason.nvim' 
+  use 'williamboman/mason-lspconfig.nvim'
 end)
 
