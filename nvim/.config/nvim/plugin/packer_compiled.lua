@@ -76,6 +76,11 @@ _G.packer_plugins = {
     path = "/Users/trent/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/trent/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/hoob3rt/lualine.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/trent/.local/share/nvim/site/pack/packer/start/packer.nvim",
