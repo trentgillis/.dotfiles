@@ -1,9 +1,12 @@
 local keymap = vim.keymap
 
+-- Fast Exit Insert Mode
+keymap.set('i', 'jk', '<ESC>')
+
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
 
--- New tab 
+-- New tab
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 
 -- New window
@@ -18,4 +21,3 @@ keymap.set('', '<C-l>', '<C-w>l')
 
 -- Fast netrw
 keymap.set('n', 'fd', ':Ex<Return>')
-
