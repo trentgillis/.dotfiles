@@ -20,4 +20,4 @@ keymap.set('', '<C-k>', '<C-w>k')
 keymap.set('', '<C-l>', '<C-w>l')
 
 -- Fast netrw
-keymap.set('n', 'fd', ':Ex<Return>')
+-- keymap.set('n', 'fd', ':Ex<Return>')
