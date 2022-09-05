@@ -26,4 +26,5 @@ return require('packer').startup(function(use)
   }
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'norcalli/nvim-colorizer.lua'
+  use 'akinsho/nvim-bufferline.lua'
 end)
