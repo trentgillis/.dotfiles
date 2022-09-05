@@ -6,7 +6,11 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/mason.nvim' 
+  use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
+  use 'L3MON4D3/LuaSnip'
 end)
-
