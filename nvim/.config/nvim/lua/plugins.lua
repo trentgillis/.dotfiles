@@ -28,4 +28,5 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'akinsho/nvim-bufferline.lua'
   use 'glepnir/lspsaga.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
 end)

@@ -1,14 +1,37 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
 
+local lsp_formatting = function(bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      -- We want to return true for any case where auto formatting should occur.
+      -- In this case we want to format through null-ls as well as solargraph
+      if client.name == 'null-ls' then
+        return true
+      end
+
+      if client.name == 'solargraph' then
+        return true
+      end
+    end,
+    bufnr = bufnr,
+  })
+end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 local on_attach = function(client, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-    vim.api.nvim_command [[augroup END]]
+  if client.supports_method("textDocument/formatting") then
+    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        lsp_formatting(bufnr)
+      end,
+    })
   end
 end
 
