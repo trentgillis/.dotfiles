@@ -13,6 +13,10 @@ local lsp_formatting = function(bufnr)
       if client.name == 'solargraph' then
         return true
       end
+
+      if client.name == 'sumneko_lua' then
+        return true
+      end
     end,
     bufnr = bufnr,
   })
