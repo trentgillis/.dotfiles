@@ -12,7 +12,8 @@ ts.setup {
     'css',
     'markdown',
     'html',
-    'jsdoc'
+    'jsdoc',
+    'embedded_template',
   },
   highlight = {
     enable = true,

@@ -16,5 +16,6 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = 'yes'
+vim.api.nvim_command('filetype indent off')
 
 vim.g.mapleader = ' '
