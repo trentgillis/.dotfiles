@@ -20,5 +20,6 @@ keymap('', '<C-k>', '<C-w>k')
 keymap('', '<C-l>', '<C-w>l')
 
 -- Buffer Navigation
-keymap('n', 'gn', ':bn<cr>')
-keymap('n', 'gp', ':bp<cr>')
+keymap('n', '<leader>k', ':bn<cr>')
+keymap('n', '<leader>j', ':bp<cr>')
+keymap('n', '<leader>bd', ':bd<cr>')

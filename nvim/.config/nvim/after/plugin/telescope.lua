@@ -47,7 +47,7 @@ end)
 keymap.set('n', '<leader>b', function()
   builtin.buffers()
 end)
-keymap.set('n', 'fd', function()
+keymap.set('n', '<leader>d', function()
   telescope.extensions.file_browser.file_browser({
     path = '%:p:h',
     cwd = vim.fn.expand('%:p:h'),
