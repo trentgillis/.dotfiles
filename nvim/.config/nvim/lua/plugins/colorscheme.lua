@@ -1,9 +1,13 @@
 return {
   {
-    "AlexvZyl/nordic.nvim",
+    "rebelot/kanagawa.nvim",
     config = function()
-      require("nordic").setup({
-        transparent_bg = true,
+      require("kanagawa").setup({
+        theme = "dragon",
+        background = {
+          dark = "dragon",
+          light = "dragon",
+        },
       })
       require("notify").setup({
         background_colour = "#000000",
@@ -13,8 +17,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      transparent = true,
-      colorscheme = "nordic",
+      colorscheme = "kanagawa",
     },
   },
 }
