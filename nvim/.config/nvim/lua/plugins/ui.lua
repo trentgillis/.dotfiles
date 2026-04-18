@@ -1,5 +1,13 @@
 return {
   {
+    "folke/noice.nvim",
+    opts = {
+      popupmenu = {
+        enabled = false,
+      },
+    },
+  },
+  {
     "folke/snacks.nvim",
     opts = {
       dashboard = {
